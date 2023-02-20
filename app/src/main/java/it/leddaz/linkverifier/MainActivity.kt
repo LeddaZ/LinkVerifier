@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Run when the Open button is pressed; opens the verified links settings
+     * Runs when the Open button is pressed; opens the verified links settings
      * for the chosen app.
      * @property view the view which contains the button
      */
@@ -96,5 +96,17 @@ class MainActivity : AppCompatActivity() {
             Uri.parse("package:$packageName")
         )
         this.startActivity(intent)
+    }
+
+    /**
+     * Runs when the See on GitHub button is pressed; opens the app's page
+     * on GitHub.
+     * @property view the view which contains the button
+     */
+    @Suppress("UNUSED_PARAMETER")
+    fun openGitHub(view: View) {
+        val browserIntent =
+            Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/LeddaZ/LinkVerifier"))
+        startActivity(browserIntent, null)
     }
 }

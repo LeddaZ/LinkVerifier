@@ -6,4 +6,5 @@
     <string name="description">Se non puoi accedere alle impostazioni dei link verificati, per esempio su MIUI, puoi scegliere un\'app e aprire le impostazioni da qui.</string>
     <string name="show_system_apps">Mostra app di sistema</string>
     <string name="about_app">Fatto con ❤️ da LeddaZ</string>
+    <string name="open_github">Vedi su GitHub</string>
 </resources>
