@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Link Verifier</string>
     <string name="open">Apri</string>
     <string name="choose_app">Scegli un\'app</string>
     <string name="description">Se non puoi accedere alle impostazioni dei link verificati, per esempio su MIUI, puoi scegliere un\'app e aprire le impostazioni da qui.</string>
