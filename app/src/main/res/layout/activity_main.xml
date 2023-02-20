@@ -8,14 +8,14 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="false"
         android:gravity="center">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16sp"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
             android:text="@string/app_name"
             android:textSize="40sp" />
 
@@ -23,7 +23,8 @@
             android:id="@+id/appDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="18sp"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
             android:text="@string/description"
             android:textAlignment="center" />
 
@@ -34,7 +35,10 @@
             android:layout_height="wrap_content"
             android:hint="@string/choose_app"
             android:labelFor="@id/selectedApp"
-            android:padding="16sp">
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
+            android:paddingLeft="16sp"
+            android:paddingRight="16sp">
 
             <AutoCompleteTextView
                 android:id="@+id/selectedApp"
@@ -44,6 +48,14 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/systemAppsSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/show_system_apps"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="10sp" />
+
         <Button
             android:id="@+id/openButton"
             android:layout_width="wrap_content"
@@ -51,6 +63,8 @@
             android:text="@string/open"
             android:gravity="center"
             android:padding="5sp"
+            android:layout_marginBottom="16sp"
+            android:layout_marginTop="16sp"
             android:onClick="openLinkSettings" />
 
     </com.google.android.material.appbar.AppBarLayout>

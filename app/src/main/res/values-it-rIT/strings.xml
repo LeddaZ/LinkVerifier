@@ -3,4 +3,5 @@
     <string name="open">Apri</string>
     <string name="choose_app">Scegli un\'app</string>
     <string name="description">Se non puoi accedere alle impostazioni dei link verificati, per esempio su MIUI, puoi scegliere un\'app e aprire le impostazioni da qui.</string>
+    <string name="show_system_apps">Mostra app di sistema</string>
 </resources>

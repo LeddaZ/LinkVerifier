@@ -4,4 +4,5 @@
     <string name="open">Open</string>
     <string name="choose_app">Choose app</string>
     <string name="description">If you can\'t access the verified links settings, for example on MIUI, you can choose an app you have installed and open the settings from here.</string>
+    <string name="show_system_apps">Show system apps</string>
 </resources>

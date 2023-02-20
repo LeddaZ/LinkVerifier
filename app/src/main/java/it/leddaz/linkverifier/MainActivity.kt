@@ -10,8 +10,10 @@ import android.provider.Settings
 import android.view.View
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import java.util.TreeMap
+
 
 /**
  * The app's main activity, started at launch.
@@ -31,7 +33,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        populateAppList()
+        val systemAppsSwitch = findViewById<MaterialSwitch>(R.id.systemAppsSwitch)
+        populateAppList(systemAppsSwitch.isChecked)
+        systemAppsSwitch.setOnCheckedChangeListener{ _, isChecked ->
+            populateAppList(isChecked)
+        }
     }
 
     /**
@@ -46,17 +52,23 @@ class MainActivity : AppCompatActivity() {
      * Populates the list of apps installed by the user.
      */
     @Suppress("DEPRECATION")
-    private fun populateAppList() {
+    private fun populateAppList(isChecked: Boolean) {
         val pm = packageManager
         appNames = TreeMap()
         val flags = PackageManager.GET_META_DATA
         val packages = pm.getInstalledPackages(flags)
         for (item in packages) {
             val applicationInfo: ApplicationInfo = item.applicationInfo
-            if (applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 1) {
+            if(isChecked) {
                 val name = pm.getApplicationLabel(applicationInfo)
                 val packageName = applicationInfo.packageName
                 appNames[name.toString()] = packageName.toString()
+            } else {
+                if (applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM != 1) {
+                    val name = pm.getApplicationLabel(applicationInfo)
+                    val packageName = applicationInfo.packageName
+                    appNames[name.toString()] = packageName.toString()
+                }
             }
         }
         val appNamesArray: MutableSet<String> = appNames.keys
