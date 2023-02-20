@@ -67,6 +67,15 @@
             android:layout_marginTop="16sp"
             android:onClick="openLinkSettings" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/aboutApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16sp"
+            android:layout_marginBottom="16sp"
+            android:text="@string/about_app"
+            android:textAlignment="center" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
