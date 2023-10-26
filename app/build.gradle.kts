@@ -14,12 +14,12 @@ fun getCommitCount(): Int {
 
 android {
     namespace = "it.leddaz.linkverifier"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "it.leddaz.linkverifier"
         minSdk = 31
-        targetSdk = 33
+        targetSdk = 34
         versionCode = getCommitCount()
         versionName = "1.1.0"
 
