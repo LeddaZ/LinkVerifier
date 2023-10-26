@@ -10,6 +10,8 @@ import android.provider.Settings
 import android.view.View
 import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.color.DynamicColors
+import com.google.android.material.elevation.SurfaceColors
 import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import java.util.TreeMap
@@ -32,6 +34,9 @@ class MainActivity : AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DynamicColors.applyToActivityIfAvailable(this)
+        window.navigationBarColor = SurfaceColors.SURFACE_0.getColor(this)
+        window.statusBarColor = SurfaceColors.SURFACE_0.getColor(this)
         setContentView(R.layout.activity_main)
         val systemAppsSwitch = findViewById<MaterialSwitch>(R.id.systemAppsSwitch)
         populateAppList(systemAppsSwitch.isChecked)
