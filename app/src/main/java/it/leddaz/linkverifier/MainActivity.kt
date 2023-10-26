@@ -23,6 +23,7 @@ import java.util.TreeMap
  * @author Leonardo Ledda (LeddaZ)
  */
 class MainActivity : AppCompatActivity() {
+
     /* Map to store the package name and corresponding app name,
      * alphabetically ordered by app name.
      */
@@ -56,7 +57,6 @@ class MainActivity : AppCompatActivity() {
     /**
      * Populates the list of apps installed by the user.
      */
-    @Suppress("DEPRECATION")
     private fun populateAppList(isChecked: Boolean) {
         val pm = packageManager
         appNames = TreeMap()
