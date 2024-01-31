@@ -2,7 +2,6 @@
 <resources>
 
     <style name="Theme.LinkVerifier" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:fontFamily">@font/harmony</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightNavigationBar">?attr/isLightTheme</item>
