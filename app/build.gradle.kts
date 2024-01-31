@@ -22,8 +22,6 @@ android {
         targetSdk = 34
         versionCode = getCommitCount()
         versionName = "1.2.1"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
